@@ -1,0 +1,129 @@
+.slick_body {
+  width: 100%;
+  height: 51.375em;
+  margin-top: 4rem;
+  background-color: rgb(238, 238, 238);
+  font-size: calc(0.82602vw);
+}
+
+.slick_slider{
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* 슬라이드 메뉴 */
+
+.slick_slide_view {
+  position: relative;
+  height: 51.375em;
+  left: 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slick_slide_view > .slide_back_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* 슬라이드 제목 및 버튼 */
+
+.slick_slide_view .slick_sub {
+  position: absolute;
+  left: 3.125em;
+  bottom: 11em;
+  max-width: 38.75em;
+}
+
+.slick_sub > .ssub_img {
+  display: block;
+  height: 16.25em;
+  object-fit: cover;
+  margin-top: 0.75em;
+}
+
+.slick_sub .sub_title {
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.75em;
+  line-height: 1.214em;
+  letter-spacing: -0.075em;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(0 0 0 / 40%) 0px 0px 0.25em;
+}
+
+.slick_sub > .slick_sbtn {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 0.25em;
+  padding: 0.75em 1.125em 0.75em 1.5em;
+  cursor: pointer;
+  margin-top: 1.5em;
+}
+
+.slick_sbtn > .sbtn_go {
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  letter-spacing: -0.0375em;
+  color: rgb(18, 18, 18);
+}
+
+/* 슬라이드 효과 */
+
+.on {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  border-radius: 50%;
+  width: 1em !important;
+  height: 1em !important;
+  margin-left: 1em;
+  background-color: rgba(255, 255, 255, 0) !important;
+  cursor: pointer;
+}
+
+/* 앞으로가기 버튼 */
+.prev_btn {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 3.125em;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  left: 0px;
+  padding-left: 0.5em;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+}
+
+/* 뒤로가기 버튼 */
+.next_btn {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 3.125em;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  right: 0px;
+  padding-right: 0.5em;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}

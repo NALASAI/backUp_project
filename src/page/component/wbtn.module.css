@@ -1,0 +1,191 @@
+.mc {
+  padding: 0px 3.125em;
+}
+
+.mtitle {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  max-width: 75.625em;
+  margin-bottom: 0.5em;
+}
+
+.sp_title{
+  font-Weight: bold;
+  font-Size: 1.75em;
+  letter-spacing: -0.04285em;
+  line-height: 1.46428em;
+  padding-Right: 0.075em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  color: rgb(18, 18, 18);
+}
+
+.upload_btn {
+  position: relative;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 2.5em;
+  padding: 0px 1em;
+  background: rgb(255, 255, 255);
+  border: 0.0625em solid rgb(226, 226, 226);
+  box-sizing: border-box;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.wcon_main{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wcon {
+  width: 100%;
+  display: flex;
+  min-height: 14em;
+  overflow-x: visible;
+  flex-wrap: nowrap;
+  transform: translate3d(0em, 0px, 0px);
+}
+
+.wcon > a {
+  margin-left: 0.375em;
+}
+
+.wcon > a:first-child {
+  margin: 0;
+}
+
+.content{
+  width: 100%;
+  display: flex;
+  min-height: 14em;
+  overflow-x: visible;
+  flex-wrap: nowrap;
+  transform: translate3d(0em, 0px, 0px);
+}
+
+.wbtn_list {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 37.5em;
+  height: 3.75em;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+
+.wbtn_list > button:first-child {
+  margin: 0;
+}
+
+.wbtn_off {
+  display: flex;
+  margin-left: 1.875em;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 3.75em;
+  width: 3.75em;
+  border-radius: 50%;
+  background-color: rgb(208, 208, 208);
+  cursor: pointer;
+}
+
+.wbtn_on{
+  display: flex;
+  margin-left: 1.875em;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 3.75em;
+  width: 3.75em;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(129, 107, 255);
+}
+
+.wbtn_list span{
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+  letter-spacing: -0.0625em;
+  color: rgb(255, 255, 255);
+}
+
+.wac {
+  flex: 0 0 18.625em;
+  width: 18.625em;
+  scroll-snap-align: start;
+  cursor: pointer;
+  margin-left: 0.375em;
+}
+
+.wac .wc_img {
+  position: relative;
+  width: 100%;
+  height: 10.375em;
+  border-radius: 0.25em;
+  margin-bottom: 0.25em;
+  overflow: hidden;
+}
+
+.wc_st {
+  font-size: 1.125em;
+  line-height: 1.5em;
+  letter-spacing: -0.05em;
+  color: rgb(18, 18, 18);
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 앞으로가기 버튼 */
+.prev_btn {
+  display: none;
+  -webkit-box-align: center;
+  align-items: center;
+  z-index: 4;
+  position: absolute;
+  top: 0px;
+  width: 2.875em;
+  height: 10.375em;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  border-radius: 0px 0.25em 0.25em 0px;
+  left: 0px;
+}
+
+/* 뒤로가기 버튼 */
+.next_btn {
+  display: none;
+  -webkit-box-align: center;
+  align-items: center;
+  z-index: 4;
+  position: absolute;
+  top: 0px;
+  width: 2.875em;
+  height: 10.375em;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  border-radius: 0.25em 0px 0px 0.25em;
+  right: 0px;
+}

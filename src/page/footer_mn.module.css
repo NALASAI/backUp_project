@@ -1,0 +1,91 @@
+.footer_main {
+  margin: 0px auto;
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: rgb(47, 49, 66);
+}
+
+.footer_main .footer_tmn {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.footer_menu {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer_menu > a {
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+.footer_menu > a:first-child {
+  margin: 0;
+}
+
+.menu_item {
+  font-size: 0.875rem;
+  color: rgb(255, 255, 255);
+}
+
+.menu_item_privacy {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.footer_link {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.footlogo {
+  margin-left: 1rem;
+}
+
+.footlogo:first-child {
+  margin: 0;
+}
+
+.footer_company {
+  display: flex;
+  margin: 2rem 0.25rem 0.5rem;
+}
+
+.toggle {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle h4 {
+  margin: 0px 0.25rem 0px 0px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.toggle svg {
+  width: auto;
+  height: 8px;
+}
+
+.footer_company_info {
+  display: flex;
+  color: rgb(255, 255, 255);
+  white-space: pre-wrap;
+}
+
+.footer_company_info p {
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin: 0.25rem;
+}

@@ -7,8 +7,7 @@ class footer extends Component {
     return (
       <div className={styles2.footer_main}>
         <div className={styles2.footer_tmn}>
-          <svg
-            width="72"
+          <svg width="72"
             height="24"
             color="white"
             viewBox="0 0 72 24"
@@ -179,13 +178,8 @@ class footer extends Component {
         </div>
         <div className={styles2.footer_company_info}>
           <div className={styles2.info_detail}>
-            <p>상호: 주식회사 라프텔 / 대표: 김범준, 박종원</p>
-            <p>주소: 서울특별시 강남구 선릉로 428, 16층 102호 (대치동)</p>
-            <p>
-              사업자등록번호 : 535-86-02250 / 통신판매번호 : 제
-              2021-서울강남-06910호
-            </p>
-            <p>이메일 : contact@laftel.net / 대표전화 : 1644-0331</p>
+            <p>강동욱</p>
+            <p>이 페이지는 연습용 제작에 사용한 페이지입니다.</p>
           </div>
         </div>
       </div>

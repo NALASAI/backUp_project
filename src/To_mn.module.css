@@ -26,14 +26,14 @@
 }
 
 .Top_mn_menu {
-  width: 75%;
-  height: auto;
+  margin: 0 auto 0 5%;
+  width: auto;
+
   display: flex;
   align-items: center;
 }
 
 .Top_mn_menu > ul {
-  width: 60%;
   display: flex;
   padding: 0;
   list-style: none;
@@ -41,11 +41,8 @@
 
 .Top_mn_menu > ul li {
   position: relative;
-  margin-left: 10px;
-}
-
-.Top_mn_menu > ul li:first-child {
-  margin: 0;
+  margin: 0 10px;
+  width: 80px;
 }
 
 
@@ -57,26 +54,21 @@
 }
 
 .Top_mn_login {
-  width: 15%;
-  height: auto;
   display: flex;
+
+  margin: 0 1%;
+
   align-items: center;
   justify-content: center;
 }
 
-.Top_mn_login .Top_mn_find{
-  width: 40%;
-  height: auto;
+.Top_mn_login div{
+  margin: 0 5px;
 }
 
 .Top_mn_find a{
   width: 20px;
   height: 20px;
-}
-
-.Top_mn_login .login_submit{
-  width: 60%;
-  height: auto;
 }
 
 .login_submit a{

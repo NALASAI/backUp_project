@@ -46,6 +46,14 @@
   color: rgb(64, 65, 93);
 }
 
+.checkbox{
+  width: 15px;
+  height: 15px;
+
+  margin: 0 8px 0 0;
+  border: 1px solid rgb(207, 207, 207);
+}
+
 .btn_wrap {
   margin-left: auto;
 }

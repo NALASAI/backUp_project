@@ -2,14 +2,40 @@ import React, { Component } from "react";
 import styles from "./01_Finder.module.css";
 import FINDITEM from './FindItem';
 
+const optionItem = [
+  { id : 'BL'}, { id : 'GL/백합'}, { id : 'SF'},
+  { id : '개그'}, { id : '공포'}, { id : '드라마'},
+  { id : '로맨스'}, { id : '모험'}, { id : '무협'},
+  { id : '미스터리'}, { id : '범죄'}
+]
+
+const optionItem2 = [
+  { id : '가족'}, { id : '감동'}, { id : '게임'},
+  { id : '동물'}, { id : '동양풍'}, { id : '두뇌싸움'},
+  { id : '로봇'}, { id : '루프물'}, { id : '무협'},
+  { id : '미스터리'}, { id : '범죄'}
+]
+
+const optionOne = optionItem.map((opt) => {
+  return(
+    <div class={styles.option_title} key={opt.id}>
+      <input type="checkbox" value="view" className={styles.checkbox}/>
+      <div style={{ fontSize: "0.875rem" }}>{opt.id}</div>
+    </div>
+  );
+})
+
+const optionTwo = optionItem2.map((opt) => {
+  return(
+    <div class={styles.option_title} key={opt.id}>
+      <input type="checkbox" value="view" className={styles.checkbox}/>
+      <div style={{ fontSize: "0.875rem" }}>{opt.id}</div>
+    </div>
+  );
+})
+
 class Finder extends Component {
   render() {
-    // const option = {
-    //   padding: "0.375rem",
-    // };
-    // const active = {
-    //   fontWeight: "500",
-    // };
     return (
       <div class={styles.fbody}>
         <div class={styles.fmain}>
@@ -38,41 +64,13 @@ class Finder extends Component {
                 <div class={styles.lview}>
                   <section>
                     <div class={styles.chbox}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalAlign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem", fontWeight: "500" }}>
                         감상 가능한 작품만 보기
                       </div>
                     </div>
                     <div class={styles.chbox}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalAlign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem", fontWeight: "500" }}>
                         멤버쉽 포함된 작품만 보기
                       </div>
@@ -99,204 +97,7 @@ class Finder extends Component {
                     </div>
                   </div>
                   <div class={styles.option}>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>BL</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>GL 백합</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>SF</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>개그</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>공포</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>드라마</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>로맨스</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>모험</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>무협</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>미스터리</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>범죄</div>
-                    </div>
+                    {optionOne}
                   </div>
                 </section>
                 <section class={styles.lsec}>
@@ -319,204 +120,7 @@ class Finder extends Component {
                     </div>
                   </div>
                   <div class={styles.option}>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>가족</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>감동</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>게임</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>동물</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>동양풍</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>두뇌싸움</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>로봇</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>루프물</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>마법소녀</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>먼치킨</div>
-                    </div>
-                    <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
-                      <div style={{ fontSize: "0.875rem" }}>무거움</div>
-                    </div>
+                    {optionTwo}
                   </div>
                 </section>
                 <section class={styles.lsec}>
@@ -540,75 +144,19 @@ class Finder extends Component {
                   </div>
                   <div class={styles.option}>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>2022년 3분기</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>2022년 2분기</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>2022년 1분기</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>2021년 4분기</div>
                     </div>
                   </div>
@@ -634,39 +182,11 @@ class Finder extends Component {
                   </div>
                   <div class={styles.option}>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>방영중</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>완결</div>
                     </div>
                   </div>
@@ -692,75 +212,19 @@ class Finder extends Component {
                   </div>
                   <div class={styles.option}>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>TVA</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>극장판</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>OVA</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>라이트애니</div>
                     </div>
                   </div>
@@ -786,95 +250,25 @@ class Finder extends Component {
                   </div>
                   <div class={styles.option}>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>
                         애니맥스 플러스
                       </div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>애니플러스</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>kt alpha</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>대원</div>
                     </div>
                     <div class={styles.option_title}>
-                      <svg
-                        fill="currentColor"
-                        preserveAspectRatio="xMidYMid meet"
-                        height="1em"
-                        width="1em"
-                        viewBox="0 0 16 16"
-                        style={{ verticalalign: "middle" }}
-                      >
-                        <path
-                          fill="#FFFFFF"
-                          fill-rule="evenodd"
-                          stroke="currentColor"
-                          d="M2 .5A1.5 1.5 0 0 0 .5 2v12A1.5 1.5 0 0 0 2 15.5h12a1.5 1.5 0 0 0 1.5-1.5V2A1.5 1.5 0 0 0 14 .5H2z"
-                        ></path>
-                      </svg>
+                      <input type="checkbox" value="view" className={styles.checkbox}/>
                       <div style={{ fontSize: "0.875rem" }}>기타</div>
                     </div>
                   </div>
@@ -907,28 +301,10 @@ class Finder extends Component {
                     </g>
                   </svg>
                 </div>
-                {/* <div class="{styles.rselect_option}">
-                  <div class="option active" style={option.active}>
-                    라프텔 랭킹 순
-                  </div>
-                  <div class="option" style={option}>
-                    이름 순
-                  </div>
-                  <div class="option" style={option}>
-                    최신 순
-                  </div>
-                  <div class="option" style={option}>
-                    평가 많은 순
-                  </div>
-                  <div class="option" style={option}>
-                    평점 높은 순
-                  </div>
-                </div> */}
               </div>
             </div>
             <FINDITEM/>
-            <div></div>
-          </div>
+          </div>  
         </div>
       </div>
     );

@@ -22,29 +22,10 @@ const btnlist = [
   {id: 7, day: '일', name:'sun'}
 ]
 
-function SliderPrevArrow(props){
-  const { styles, onClick } = props;
-  return(
-    <div className={styles.prev_btn} onClick={onClick}/>
-  )
-}
-
-function SliderNextArrow(props){
-  const { styles, onClick } = props;
-  return(
-    <div className={styles.prev_btn} onClick={onClick}/>
-  )
-}
-
 const setting = {
   speed: 500,
   arrows: true,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 6,
-  variableWidth: true,
-  nextArrow: <SliderNextArrow/>,
-  prevArrow: <SliderPrevArrow/>
+  infinite: true
 }
 
 const SelectList = () => {
@@ -67,7 +48,8 @@ const SelectList = () => {
 
   const WBTN = btnlist.map((Btnl) => {
     return(
-      <button key={Btnl.id} name={Btnl.name} onClick={handleClick} className={Btnl.name === isSelectBtn ? styles.wbtn_on : styles.wbtn_off}>
+      <button key={Btnl.id} name={Btnl.name} onClick={handleClick} 
+      className={Btnl.name === isSelectBtn ? styles.wbtn_on : styles.wbtn_off}>
         <span>{Btnl.day}</span>
       </button>
     )

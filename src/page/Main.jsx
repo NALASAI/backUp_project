@@ -76,10 +76,8 @@ function Main() {
               원작보고오기
             </span>
           </div>
-          <div style={{ display: "flex" }}>
-            <div className={styles.wcon}>
-              {Wrap}
-            </div>
+          <div className={styles.wcon}>
+            {Wrap}
           </div>
         </div>
         <div className={styles.mc}>

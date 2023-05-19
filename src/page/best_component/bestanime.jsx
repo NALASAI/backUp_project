@@ -29,7 +29,8 @@ const SelectList = () => {
 
   const BEST = btnlist.map((Btnl) => {
     return(
-      <button key={Btnl.id} name={Btnl.name} onClick={handleClick} className={Btnl.name === isSelectBtn ? styles.mc_tbtn_on : styles.mc_tbtn_off}>
+      <button key={Btnl.id} name={Btnl.name} onClick={handleClick}
+      className={Btnl.name === isSelectBtn ? styles.mc_tbtn_on : styles.mc_tbtn_off}>
         <span>{Btnl.title}</span>
       </button>
     )
